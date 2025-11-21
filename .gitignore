@@ -1,0 +1,27 @@
+# Configuration et secrets
+config.php
+.env
+.env.local
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Dossiers
+node_modules/
+vendor/
+/dist/
+/build/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Fichiers temporaires
+*.tmp
+*.temp

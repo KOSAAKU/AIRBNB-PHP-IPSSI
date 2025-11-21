@@ -7,7 +7,7 @@ CREATE TABLE `listings` (
   `price` int,
   `neighbourhood_group_cleansed` text,
   `review_scores_value` double DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 /*
