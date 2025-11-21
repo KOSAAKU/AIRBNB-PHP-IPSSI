@@ -1,0 +1,433 @@
+:root {
+  --primary: #ff5a5f;       
+  --primary-dark: #e03d47;  
+  --secondary: #00a699;      
+  --text: #222222;         
+  --text-light: #717171;     
+  --bg: #f7f7f7;            
+  --white: #ffffff;
+  --border: #dddddd;
+  --shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --radius: 8px;
+  --transition: 300ms ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text);
+  background-color: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+a:hover {
+  color: var(--primary-dark);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  width: 100%;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: var(--text);
+  letter-spacing: -0.5px;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--text);
+}
+
+p {
+  color: var(--text-light);
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.btn-ajout, .btn-save {
+  display: inline-block;
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 12px 24px;
+  border-radius: var(--radius);
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition);
+  box-shadow: var(--shadow);
+}
+
+.btn-ajout:hover, .btn-save:hover {
+  background-color: var(--primary-dark);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
+}
+
+.btn-ajout {
+  margin-bottom: 30px;
+}
+
+.tri-form {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  padding: 16px;
+  background-color: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  flex-wrap: wrap;
+}
+
+.tri-form label {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.tri-form select {
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 14px;
+  cursor: pointer;
+  transition: border-color var(--transition);
+  background-color: var(--white);
+  color: var(--text);
+}
+
+.tri-form select:hover {
+  border-color: var(--primary);
+}
+
+.tri-form select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(255, 90, 95, 0.1);
+}
+
+.ordre-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 30px;
+  padding: 12px 16px;
+  background-color: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  flex-wrap: wrap;
+}
+
+.ordre-links span {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.ordre-links a {
+  padding: 8px 12px;
+  border-radius: var(--radius);
+  transition: all var(--transition);
+  border: 1px solid transparent;
+}
+
+.ordre-links a:hover {
+  background-color: var(--bg);
+  border-color: var(--primary);
+}
+
+.ordre-links a.active {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.liste-logements {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.carte {
+  background-color: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: all var(--transition);
+  cursor: pointer;
+}
+
+.carte:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-8px);
+}
+
+.carte img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transition);
+}
+
+.carte:hover img {
+  transform: scale(1.05);
+}
+
+.carte .info {
+  padding: 16px;
+}
+
+.carte h2 {
+  font-size: 16px;
+  margin-bottom: 12px;
+  color: var(--text);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.carte p {
+  font-size: 13px;
+  color: var(--text-light);
+  margin-bottom: 8px;
+  display: flex;
+  gap: 4px;
+}
+
+.carte p strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.carte .prix {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-top: 12px;
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 20px;
+  background-color: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  flex-wrap: wrap;
+}
+
+.pagination a {
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: all var(--transition);
+  font-weight: 500;
+  color: var(--text);
+  display: inline-block;
+}
+
+.pagination a:hover {
+  background-color: var(--bg);
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.pagination a.active {
+  background-color: var(--primary);
+  color: var(--white);
+  border-color: var(--primary);
+}
+
+.form-ajout {
+  background-color: var(--white);
+  padding: 32px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  max-width: 500px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 14px;
+  transition: border-color var(--transition), box-shadow var(--transition);
+  font-family: inherit;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(255, 90, 95, 0.1);
+}
+
+.form-group input::placeholder {
+  color: var(--text-light);
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 24px 16px;
+  }
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+
+  .liste-logements {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 16px;
+  }
+
+  .carte img {
+    height: 160px;
+  }
+
+  .tri-form, .ordre-links {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .tri-form select {
+    width: 100%;
+  }
+
+  .form-ajout {
+    padding: 20px;
+  }
+
+  .pagination {
+    gap: 4px;
+  }
+
+  .pagination a {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 16px 12px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .liste-logements {
+    grid-template-columns: 1fr;
+  }
+
+  .btn-ajout {
+    width: 100%;
+  }
+
+  .tri-form {
+    width: 100%;
+  }
+
+  .ordre-links {
+    width: 100%;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.carte {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.carte:nth-child(1) { animation-delay: 0.1s; }
+.carte:nth-child(2) { animation-delay: 0.2s; }
+.carte:nth-child(3) { animation-delay: 0.3s; }
+.carte:nth-child(4) { animation-delay: 0.4s; }
+.carte:nth-child(5) { animation-delay: 0.5s; }
+.carte:nth-child(6) { animation-delay: 0.6s; }
+.carte:nth-child(7) { animation-delay: 0.7s; }
+.carte:nth-child(8) { animation-delay: 0.8s; }
+.carte:nth-child(9) { animation-delay: 0.9s; }
+.carte:nth-child(10) { animation-delay: 1s; }
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-light);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}

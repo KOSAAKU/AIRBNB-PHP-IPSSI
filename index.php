@@ -34,13 +34,13 @@ $nombre_de_pages = compterPages($dbh, $limite);
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Airbnb Clone</title>
+    <title>FARBNB</title>
     <link rel="stylesheet" href="<?php echo dirname($_SERVER['REQUEST_URI']); ?>/style.css">
 </head>
 <body>
 
 <div class="container">
-    <h1>Locations de vacances</h1>
+    <h1>FARBNB</h1>
     <a href="ajout.php" class="btn-ajout">Ajouter une annonce</a>
 
     <?php include 'sort.php'; ?>

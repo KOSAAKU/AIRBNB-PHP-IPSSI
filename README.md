@@ -1,4 +1,4 @@
-# Projet Airbnb 
+# Projet Airbnb - Clone en PHP
 
 Ce projet est une application web développée dans le cadre de notre formation à l'IPSSI. L'objectif est de recréer une partie des fonctionnalités de la plateforme Airbnb en utilisant PHP et les technologies web associées.
 
@@ -6,12 +6,25 @@ Ce projet est une application web développée dans le cadre de notre formation 
 
 ##  contexte du projet
 
+*   **École :** IPSSI - L'école d'informatique, web et design graphique
+*   **Cursus :** [Précisez votre cursus, ex: Bachelor Développement Web]
+*   **Année :** [Précisez l'année, ex: 2023-2024]
+
 Ce projet a pour but de mettre en pratique les compétences acquises en développement backend avec PHP, la gestion de base de données et la création d'interfaces utilisateur dynamiques.
+
+## Fonctionnalités
+
+- [ ] Inscription et Connexion des utilisateurs
+- [ ] Consultation des annonces de logements
+- [ ] Recherche et filtrage des annonces
+- [ ] Affichage du détail d'un logement
+- [ ] Système de réservation (à venir)
+- [ ] Espace personnel pour gérer ses annonces/réservations (à venir)
 
 ## Technologies Utilisées
 
 *   **Backend :** PHP
-*   **Frontend :** HTML5, CSS3
+*   **Frontend :** HTML5, CSS3, JavaScript
 *   **Base de données :** MySQL / MariaDB
 *   **Serveur local :** XAMPP / WAMP / MAMP
 
