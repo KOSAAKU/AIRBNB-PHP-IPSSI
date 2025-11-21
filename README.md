@@ -1,48 +1,53 @@
-# Projet Airbnb - Clone en PHP
+# 🏠 Projet Airbnb Clone - PHP Natif
 
-Ce projet est une application web développée dans le cadre de notre formation à l'IPSSI. L'objectif est de recréer une partie des fonctionnalités de la plateforme Airbnb en utilisant PHP et les technologies web associées.
+![PHP](https://img.shields.io/badge/PHP-7.4%2B-777BB4?style=for-the-badge&logo=php&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-00000f?style=for-the-badge&logo=mysql&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![IPSSI](https://img.shields.io/badge/École-IPSSI-orange?style=for-the-badge)
+
+> Ce projet a été réalisé dans le cadre de l'évaluation "Développement Web PHP" à l'**IPSSI**. L'objectif est de reproduire les fonctionnalités principales d'un site de réservation de vacances type Airbnb, en utilisant PHP natif (sans framework) et une base de données MySQL.
 
 ---
 
-##  contexte du projet
+## ✅ Fonctionnalités Réalisées
 
-*   **École :** IPSSI - L'école d'informatique, web et design graphique
-*   **Cursus :** [Précisez votre cursus, ex: Bachelor Développement Web]
-*   **Année :** [Précisez l'année, ex: 2023-2024]
+Le projet couvre l'ensemble des consignes demandées :
 
-Ce projet a pour but de mettre en pratique les compétences acquises en développement backend avec PHP, la gestion de base de données et la création d'interfaces utilisateur dynamiques.
+* **Affichage des logements :** Liste dynamique de 10 annonces par page avec photo, prix, ville et hôte.
+* **Pagination :** Système de navigation entre les pages (Précédent / Suivant / Numéros). La page courante est mise en évidence.
+* **Tri dynamique :** Possibilité de trier les résultats par :
+    * Nom
+    * Ville
+    * Prix
+    * Propriétaire
+* **Tri & Ordre (Fonctionnalité Avancée) :** Le choix du tri (ex: Prix) et l'ordre (Croissant/Décroissant) sont **conservés** lorsque l'on change de page.
+* **Ajout d'annonce :** Formulaire fonctionnel pour insérer un nouveau logement en base de données (via URL d'image).
+* **Design :** Interface utilisateur propre et responsive réalisée en CSS (fichier `style.css`).
 
-## Fonctionnalités
+---
 
-- [ ] Inscription et Connexion des utilisateurs
-- [ ] Consultation des annonces de logements
-- [ ] Recherche et filtrage des annonces
-- [ ] Affichage du détail d'un logement
-- [ ] Système de réservation (à venir)
-- [ ] Espace personnel pour gérer ses annonces/réservations (à venir)
+## 🛠️ Stack Technique
 
-## Technologies Utilisées
+* **Langage Backend :** PHP (Utilisation de PDO pour la sécurité et la connexion BDD).
+* **Base de données :** MySQL / MariaDB.
+* **Frontend :** HTML5, CSS3.
+* **Outils :** Git, GitHub (Gestion de versions et branches).
 
-*   **Backend :** PHP
-*   **Frontend :** HTML5, CSS3, JavaScript
-*   **Base de données :** MySQL / MariaDB
-*   **Serveur local :** XAMPP / WAMP / MAMP
+---
 
-## Installation
+## 📂 Structure du Projet
 
-1.  Clonez ce dépôt sur votre machine locale.
-    ```bash
-    git clone [URL_DU_DEPOT]
-    ```
-2.  Placez le dossier du projet dans le répertoire `htdocs` (pour XAMPP) ou `www` (pour WAMP/MAMP) de votre serveur local.
-3.  Importez la base de données en utilisant le fichier `database.sql` (à créer/fournir) via phpMyAdmin.
-4.  Configurez les informations de connexion à la base de données dans le fichier `config.php` (ou le fichier correspondant).
-5.  Lancez votre serveur Apache et MySQL.
-6.  Accédez au projet via votre navigateur à l'adresse `http://localhost/AIRBNB/`.
+Voici l'organisation des fichiers du projet :
 
-## Auteurs
-
-Ce projet a été réalisé par :
-
-*   **AYAICHIA Faris**
-*   **REY Sami**
+```text
+📦 AIRBNB
+ ┣ 📜 config.php        # Configuration de la connexion BDD ($dbh)
+ ┣ 📜 index.php         # Contrôleur principal (gestion de l'affichage)
+ ┣ 📜 list.php          # Vue : Affichage de la grille des logements
+ ┣ 📜 sort.php          # Vue : Formulaire de tri et boutons d'ordre
+ ┣ 📜 page.php          # Vue : Barre de pagination
+ ┣ 📜 ajout.php         # Page : Formulaire d'ajout d'une annonce
+ ┣ 📜 function_adv.php  # Fonctions utilitaires (calcul du nombre de pages)
+ ┣ 📜 style.css         # Feuilles de style CSS
+ ┣ 📜 airbnb.sql        # Fichier d'export de la base de données
+ ┗ 📜 README.md         # Documentation du projet
